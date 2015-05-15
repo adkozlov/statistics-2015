@@ -1,0 +1,37 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english,russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{listings,comment,hyperref,listings,verbatim,amssymb}
+\usepackage[nohead]{geometry}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\title{Домашнее задание №10}
+\author{Андрей Козлов}
+\date{\today}
+
+\maketitle
+
+\begin{enumerate}
+	\item {
+		Условие: $n = 10, a = 100, s^2 \left( X \right) = 162, \alpha = 0.1, H_0$ -- гипотеза Алекса$, H_1$ -- гипотеза Тони.
+
+		Решение: $$t = \left( n - 1 \right) \cdot \frac{s^2 \left( X \right)}{a} = \left( 10 - 1 \right) \cdot \frac{162}{100} = 14.58$$
+
+		Ответ: $S = \left( \chi^2_{1 - \alpha, n - 1}, +\infty \right) = \left( 14.68, +\infty \right)$, нет оснований отвергать гипотезу Алекса.
+	}
+
+	\item {
+		Условие: $n = 100, a = 30, \bar{X} = 28.6, \sigma = 4.2, \alpha = 0.05, H_0$ -- гипотеза производителя$, H_1 = \bar{H_0}$.
+
+		Решение: $$z < \sqrt{n} \cdot \frac{\bar{X} - a}{\sigma} = 10 \cdot \frac{28.6 - 30}{4.2} = -\frac{10}{3}$$
+
+		Ответ: $S = \left[ 1.64, +\infty \right)$, нет оснований отвергать гипотезу производителя.
+	}
+
+\end{enumerate}
+
+\end{document}
