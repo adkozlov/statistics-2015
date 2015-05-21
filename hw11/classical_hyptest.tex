@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english,russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{listings,comment,hyperref,listings,verbatim,amssymb}
+\usepackage[nohead]{geometry}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\title{Домашнее задание №11}
+\author{Андрей Козлов}
+\date{\today}
+
+\maketitle
+
+\begin{enumerate}
+	\item {
+		Условие: $n_1 = n_2 = 50, \alpha = 0.05, \hat{p_1} = \frac{42}{n_1}, \hat{p_2} = \frac{35}{n_2}, H_0$ -- лекарство эффективнее плацебо, $H_1 = \overline{H_0}$
+
+		Решение:
+		$$S = \left( -\infty; z_{\alpha} \right) = \left( -\infty; -1.65 \right)$$
+		$$\hat{p} = \frac{n_1 \cdot \hat{p_1} + n_2 \cdot \hat{p_2}}{n_1 + n_2} = \frac{42 + 35}{50 + 50} = 0.77$$
+		$$\sigma = \sqrt{\hat{p} \cdot \left( 1 - \hat{p} \right) \cdot \left( \frac{1}{n_1} + \frac{1}{n_2} \right)} = \sqrt{0.77 \cdot 0.23 \cdot \left( 0.02 + 0.02 \right)} = 0.084$$
+		$$z = \frac{\hat{p_1} - \hat{p_2}}{\sigma} = \frac{0.84 - 0.7}{0.084} = 1.66$$
+		$$p = P \left(z < 1.66 \right) = 0.95$$
+
+		Ответ: $\hat{p}$ лежит вне критической области, таким образом, нет оснований отвергать гипотезу, что лекарство эффективно; $p = 0.95$.
+	}
+
+	\item {
+		Условие: $n_1 = 25, \overline{X_1} = 152, s_1 = 4, n_2 = 28, \overline{X_2} = 148, s_2 = 5, \alpha = 0.05, H_0$ -- средний рост совпадает, $H_1 = \overline{H_0}$
+
+		Решение:
+		$$\mu = 50, S = \left( -\infty; z_{\frac{\alpha}{2}} \right) \cup \left( z_{1 - \frac{\alpha}{2}}; +\infty \right) = \left( -\infty; -2.01 \right) \cup \left( 2.01; +\infty \right)$$
+		$$Z = \frac{\overline{X_1} - \overline{X_2}}{\sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2}}} = \frac{152 - 148}{\frac{4^2}{25} + \frac{5^2}{28}} = 3.23$$
+		$$p = 2 \cdot \min \left( 0.999, 0.001 \right) = 0.002$$
+
+		Ответ: $Z$ лежит в критической области, таким образом, гипотеза о равенстве роста отвергается; $p = 0.002$.
+	}
+
+\end{enumerate}
+
+\end{document}
